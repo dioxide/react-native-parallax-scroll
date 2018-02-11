@@ -91,6 +91,8 @@ export default class ParallaxScroll extends PureComponent {
 
     if (Animated.ScrollView !== props.scrollableComponent) {
       this.ScrollableComponent = Animated.createAnimatedComponent(props.scrollableComponent);
+    }else{
+      this.ScrollableComponent = props.scrollableComponent;
     }
 
     this._onAnimatedScroll = Animated.event(
